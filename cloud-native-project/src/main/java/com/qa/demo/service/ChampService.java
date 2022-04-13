@@ -1,6 +1,7 @@
 package com.qa.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,13 +30,14 @@ public class ChampService implements ServiceInterface<Champ>{
 	@Override
 	public List<Champ> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.rep.findAll();
 	}
 
 	@Override
 	public Champ getById(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Champ> read = this.rep.findById(id);
+		return read.get();
 	}
 
 	@Override
