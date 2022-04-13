@@ -79,6 +79,11 @@ public class ChampService implements ServiceInterface<Champ>{
 		List<Champ> championList = this.rep.findbyDefences(defences);
 		return championList;
 	}
+	
+	public List<Champ> getChampByDivision(String division) {
+		List<Champ> championList = this.rep.findbyDivisionIgnoreCase(division);
+		return championList;
+	}
 
 	
 }
