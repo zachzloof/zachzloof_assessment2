@@ -43,7 +43,19 @@ public class ChampService implements ServiceInterface<Champ>{
 	@Override
 	public Champ replace(Integer id, Champ t) {
 		// TODO Auto-generated method stub
-		return null;
+		Champ oldChamp = this.rep.findById(id).get();
+		
+		oldChamp.setAge(t.getAge());
+		oldChamp.setBonuses(t.getBonuses());
+		oldChamp.setDefences(t.getDefences());
+		oldChamp.setDivision(t.getDivision());
+		oldChamp.setfName(t.getfName());
+		oldChamp.setlName(t.getlName());
+		oldChamp.setLosses(t.getLosses());
+		oldChamp.setWins(t.getWins());
+		
+		Champ newChamp = this.rep.save(oldChamp);
+		return newChamp;
 	}
 
 	@Override
