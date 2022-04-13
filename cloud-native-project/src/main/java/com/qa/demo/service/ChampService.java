@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.qa.demo.repo.ChampRepo;
 import com.qa.demo.domain.Champ;
@@ -59,9 +60,14 @@ public class ChampService implements ServiceInterface<Champ>{
 	}
 
 	@Override
-	public void remove(Integer id) {
+	public void remove(@PathVariable Integer id) {
 		// TODO Auto-generated method stub
-		
+		this.rep.deleteById(id);
+	}
+	
+	public List<Champ> getChampByFName(String fName) {
+		List<Champ> championList = this.rep.findbyFNameIgnoreCase(fName);
+		return championList;
 	}
 
 	
