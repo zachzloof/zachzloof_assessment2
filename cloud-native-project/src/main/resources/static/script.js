@@ -97,9 +97,24 @@ const createChamp = () => {
     });
   }
 
+  const readByDivision = () => {
+    let division = DOM.readByDivisionInput.value;
+    let childElement = DOM.output;
+    axios.get(`http://localhost:8080/getByDivision/` + division).then((res) => {
+      console.log(res);
+      childElement.innerHTML = "";
+      for (let champInfo of res.data) {
+        addChamp(champInfo);
+      }
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
   DOM.createButton.onclick = () => createChamp();
   DOM.readAllButton.onclick = () => refresh();
   DOM.readByIdButton.onclick = () => readById();
+  DOM.readByDivisionButton.onclick = () => readByDivision();
   DOM.readByFirstNameButton.onclick = () => readByFirstName();
   DOM.readByLastNameButton.onclick = () => readByLastName();
   DOM.readByDefencesButton.onclick = () => readByDefences();

@@ -24,3 +24,6 @@ export const readByLastNameButton = document.getElementById(`read-lastname-butto
 
 export const readByDefencesButton = document.getElementById(`read-defences-button`);
 export const readByDefencesInput = document.getElementById(`input-read-defences`);
+
+export const readByDivisionButton = document.getElementById(`read-division-button`);
+export const readByDivisionInput = document.getElementById(`input-read-division`);
