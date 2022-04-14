@@ -68,10 +68,25 @@ const createChamp = () => {
       console.log(err);
     });
   }
+
   const readByLastName = () => {
     let lastName = DOM.readByLastNameInput.value;
     let childElement = DOM.output;
     axios.get(`http://localhost:8080/getByLName/` + lastName).then((res) => {
+      console.log(res);
+      childElement.innerHTML = "";
+      for (let champInfo of res.data) {
+        addChamp(champInfo);
+      }
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
+  const readByDefences = () => {
+    let defences = DOM.readByDefencesInput.value;
+    let childElement = DOM.output;
+    axios.get(`http://localhost:8080/getByDefences/` + defences).then((res) => {
       console.log(res);
       childElement.innerHTML = "";
       for (let champInfo of res.data) {
@@ -87,3 +102,4 @@ const createChamp = () => {
   DOM.readByIdButton.onclick = () => readById();
   DOM.readByFirstNameButton.onclick = () => readByFirstName();
   DOM.readByLastNameButton.onclick = () => readByLastName();
+  DOM.readByDefencesButton.onclick = () => readByDefences();

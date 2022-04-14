@@ -62,7 +62,7 @@ public class ChampController {
 		return ResponseEntity.ok(list);
 	}
 	
-	@GetMapping("/getByDefences/{division}")
+	@GetMapping("/getByDivision/{division}")
 	public ResponseEntity<List<Champ>> getChampionsByDivision(@PathVariable String division) {
 		List<Champ> list = this.service.getChampByDivision(division);
 		return ResponseEntity.ok(list);
