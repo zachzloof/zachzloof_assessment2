@@ -1,1 +1,10 @@
 export const output = document.getElementById(`display-list-output`);
+export const createFNameInput = document.getElementById(`input-first-name`);
+export const createLNameInput = document.getElementById(`input-last-name`);
+export const createAgeInput = document.getElementById(`input-age`);
+export const createWinsInput = document.getElementById(`input-wins`);
+export const createLossesInput = document.getElementById(`input-losses`);
+export const createDefencesInput = document.getElementById(`input-defences`);
+export const createBonusesInput = document.getElementById(`input-bonuses`);
+export const createDivisionInput = document.getElementById(`input-division`);
+export const createButton = document.getElementById(`create-button`);

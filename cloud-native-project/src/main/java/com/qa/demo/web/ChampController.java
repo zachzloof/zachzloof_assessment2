@@ -44,15 +44,15 @@ public class ChampController {
 		return this.service.getById(id);
 	}
 	
-	@GetMapping("/getByFName/{fName}")
+	@GetMapping("/getByFName/{firstName}")
 	public ResponseEntity<List<Champ>> getChampionsByFirstName(@PathVariable String fName) {
-		List<Champ> list = this.service.getChampByFName(fName);
+		List<Champ> list = this.service.getChampByFirstName(fName);
 		return ResponseEntity.ok(list);
 	}
 	
-	@GetMapping("/getByLName/{lName}")
+	@GetMapping("/getByLName/{lastName}")
 	public ResponseEntity<List<Champ>> getChampionsByLastName(@PathVariable String lName) {
-		List<Champ> list = this.service.getChampByFName(lName);
+		List<Champ> list = this.service.getChampByLastName(lName);
 		return ResponseEntity.ok(list);
 	}
 	
@@ -75,7 +75,7 @@ public class ChampController {
 		return res;
 	}
 	
-	@DeleteMapping("/remove/{id")
+	@DeleteMapping("/remove/{id}")
 	public ResponseEntity<?> deleteChampion(@PathVariable Integer id) {
 		this.service.remove(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
