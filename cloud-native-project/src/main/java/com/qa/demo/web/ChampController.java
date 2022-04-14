@@ -44,13 +44,13 @@ public class ChampController {
 		return this.service.getById(id);
 	}
 	
-	@GetMapping("/getByFName/{firstName}")
+	@GetMapping("/getByFName/{fName}")
 	public ResponseEntity<List<Champ>> getChampionsByFirstName(@PathVariable String fName) {
 		List<Champ> list = this.service.getChampByFirstName(fName);
 		return ResponseEntity.ok(list);
 	}
 	
-	@GetMapping("/getByLName/{lastName}")
+	@GetMapping("/getByLName/{lName}")
 	public ResponseEntity<List<Champ>> getChampionsByLastName(@PathVariable String lName) {
 		List<Champ> list = this.service.getChampByLastName(lName);
 		return ResponseEntity.ok(list);

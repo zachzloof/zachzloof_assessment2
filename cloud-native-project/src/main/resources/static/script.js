@@ -34,8 +34,8 @@ const createChamp = () => {
       axios.get(`http://localhost:8080/getAll`).then((res) => {
         console.log(res);
         if (Array.isArray(res.data)) {
-            for (let champ of res.data) {
-                addChamp(champ);}
+            for (let champInfo of res.data) {
+                addChamp(champInfo);}
         } else {
             addChamp(res.data);
         }}).catch((err) => {
@@ -43,5 +43,20 @@ const createChamp = () => {
       })
   }
 
+  const readByFirstName = () => {
+    let firstName = DOM.readByFirstNameInput.value;
+    let childElement = DOM.output;
+    axios.get(`http://localhost:8080/getByFName/` + firstName).then((res) => {
+      console.log(res);
+      childElement.innerHTML = "";
+      for (let champInfo of res.data) {
+        addChamp(champInfo);
+      }
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
   DOM.createButton.onclick = () => createChamp();
   DOM.readAllButton.onclick = () => refresh();
+  DOM.readByFirstNameButton.onclick = () => readByFirstName();

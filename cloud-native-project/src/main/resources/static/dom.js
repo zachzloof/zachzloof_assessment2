@@ -1,4 +1,5 @@
 export const output = document.getElementById(`display-list-output`);
+//CREATE
 export const createFNameInput = document.getElementById(`input-first-name`);
 export const createLNameInput = document.getElementById(`input-last-name`);
 export const createAgeInput = document.getElementById(`input-age`);
@@ -8,4 +9,8 @@ export const createDefencesInput = document.getElementById(`input-defences`);
 export const createBonusesInput = document.getElementById(`input-bonuses`);
 export const createDivisionInput = document.getElementById(`input-division`);
 export const createButton = document.getElementById(`create-button`);
+//READ
 export const readAllButton = document.getElementById(`read-all-button`);
+export const readByIdInput = document.getElementById(`read-one-button`);
+export const readByFirstNameInput = document.getElementById(`input-read-firstname`);
+export const readByFirstNameButton = document.getElementById(`read-firstname-button`);
