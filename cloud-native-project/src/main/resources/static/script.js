@@ -6,7 +6,7 @@ let addChamp = champ => {
     let childElement = document.createElement(`li`);
     childElement.id = champ.id;
     childElement.innerHTML = `${JSON.stringify(champ)}`;
-    parentElement = DOM.output;
+    let parentElement = DOM.output;
     parentElement.appendChild(childElement);
 }
 
@@ -33,11 +33,9 @@ const createChamp = () => {
       
       axios.get(`http://localhost:8080/getAll`).then((res) => {
         console.log(res);
-        array = []
-        if (typeof(res.data) == typeof(array)) {
-            for (let champ of response.data) {
-                addChamp(champ);
-              }
+        if (Array.isArray(res.data)) {
+            for (let champ of res.data) {
+                addChamp(champ);}
         } else {
             addChamp(res.data);
         }}).catch((err) => {
