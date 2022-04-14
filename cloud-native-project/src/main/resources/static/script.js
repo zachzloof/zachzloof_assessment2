@@ -43,6 +43,18 @@ const createChamp = () => {
       })
   }
 
+  const readById = () => {
+    let id = DOM.readByIdInput.value;
+    let childElement = DOM.output;
+    axios.get(`http://localhost:8080/get/` + id).then((res) => {
+      console.log(res);
+      childElement.innerHTML = "";
+      addChamp(res.data)
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
   const readByFirstName = () => {
     let firstName = DOM.readByFirstNameInput.value;
     let childElement = DOM.output;
@@ -72,5 +84,6 @@ const createChamp = () => {
 
   DOM.createButton.onclick = () => createChamp();
   DOM.readAllButton.onclick = () => refresh();
+  DOM.readByIdButton.onclick = () => readById();
   DOM.readByFirstNameButton.onclick = () => readByFirstName();
   DOM.readByLastNameButton.onclick = () => readByLastName();
