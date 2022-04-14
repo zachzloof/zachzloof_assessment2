@@ -15,10 +15,10 @@ public class Champ {
 		private Integer id;
 		
 		@Column(nullable=false)
-		private String fName;
+		private String firstName;
 		
 		@Column(nullable=false)
-		private String lName;
+		private String lastName;
 		
 		@Column(nullable=false)
 		private Integer age;
@@ -29,7 +29,7 @@ public class Champ {
 		@Column(nullable=false)
 		private Integer losses;
 		
-		@Column(nullable=false)
+		@Column
 		private Integer defences;
 		
 		@Column
@@ -39,12 +39,12 @@ public class Champ {
 		private String division;
 
 		// This is my constructor that was generated using all fields
-		public Champ(Integer id, String fName, String lName, Integer age, Integer wins, Integer losses,
+		public Champ(Integer id, String firstName, String lastName, Integer age, Integer wins, Integer losses,
 				Integer defences, Integer bonuses, String division) {
 			super();
 			this.id = id;
-			this.fName = fName;
-			this.lName = lName;
+			this.firstName = firstName;
+			this.lastName = lastName;
 			this.age = age;
 			this.wins = wins;
 			this.losses = losses;
@@ -59,7 +59,14 @@ public class Champ {
 			// TODO Auto-generated constructor stub
 		}
 
-
+	
+		// This is my generated to-string method
+		@Override
+		public String toString() {
+			return "Champ [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age
+					+ ", wins=" + wins + ", losses=" + losses + ", defences=" + defences + ", bonuses=" + bonuses
+					+ ", division=" + division + "]";
+		}
 
 		// These are my getters and setters for all fields
 		public Integer getId() {
@@ -70,20 +77,20 @@ public class Champ {
 			this.id = id;
 		}
 
-		public String getfName() {
-			return fName;
+		public String getFirstName() {
+			return firstName;
 		}
 
-		public void setfName(String fName) {
-			this.fName = fName;
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
 		}
 
-		public String getlName() {
-			return lName;
+		public String getLastName() {
+			return lastName;
 		}
 
-		public void setlName(String lName) {
-			this.lName = lName;
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
 		}
 
 		public Integer getAge() {
@@ -134,85 +141,8 @@ public class Champ {
 			this.division = division;
 		}
 		
-		// This is my generated to-string method
-		@Override
-		public String toString() {
-			return "Champ [id=" + id + ", fName=" + fName + ", lName=" + lName + ", age=" + age + ", wins=" + wins
-					+ ", losses=" + losses + ", defences=" + defences + ", bonuses=" + bonuses + ", division="
-					+ division + "]";
-		}
-		
 		// These two methods are my hashcode and equals methods, these will be used for unit testing later on.
-		@Override
-		public int hashCode() {
-			final int prime = 31;
-			int result = 1;
-			result = prime * result + ((age == null) ? 0 : age.hashCode());
-			result = prime * result + ((bonuses == null) ? 0 : bonuses.hashCode());
-			result = prime * result + ((defences == null) ? 0 : defences.hashCode());
-			result = prime * result + ((division == null) ? 0 : division.hashCode());
-			result = prime * result + ((fName == null) ? 0 : fName.hashCode());
-			result = prime * result + ((id == null) ? 0 : id.hashCode());
-			result = prime * result + ((lName == null) ? 0 : lName.hashCode());
-			result = prime * result + ((losses == null) ? 0 : losses.hashCode());
-			result = prime * result + ((wins == null) ? 0 : wins.hashCode());
-			return result;
-		}
+	
 
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			Champ other = (Champ) obj;
-			if (age == null) {
-				if (other.age != null)
-					return false;
-			} else if (!age.equals(other.age))
-				return false;
-			if (bonuses == null) {
-				if (other.bonuses != null)
-					return false;
-			} else if (!bonuses.equals(other.bonuses))
-				return false;
-			if (defences == null) {
-				if (other.defences != null)
-					return false;
-			} else if (!defences.equals(other.defences))
-				return false;
-			if (division == null) {
-				if (other.division != null)
-					return false;
-			} else if (!division.equals(other.division))
-				return false;
-			if (fName == null) {
-				if (other.fName != null)
-					return false;
-			} else if (!fName.equals(other.fName))
-				return false;
-			if (id == null) {
-				if (other.id != null)
-					return false;
-			} else if (!id.equals(other.id))
-				return false;
-			if (lName == null) {
-				if (other.lName != null)
-					return false;
-			} else if (!lName.equals(other.lName))
-				return false;
-			if (losses == null) {
-				if (other.losses != null)
-					return false;
-			} else if (!losses.equals(other.losses))
-				return false;
-			if (wins == null) {
-				if (other.wins != null)
-					return false;
-			} else if (!wins.equals(other.wins))
-				return false;
-			return true;
-		}
+	
 }

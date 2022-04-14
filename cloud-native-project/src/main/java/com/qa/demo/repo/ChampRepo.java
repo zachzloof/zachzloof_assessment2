@@ -10,9 +10,9 @@ import com.qa.demo.domain.Champ;
 @Repository
 public interface ChampRepo extends JpaRepository<Champ, Integer>{
 	
-	List<Champ> findbyFNameIgnoreCase(String fName);
-	List<Champ> findbyLNameIgnoreCase(String lName);
-	List<Champ> findbyDefences(Integer defences);
-	List<Champ> findbyDivisionIgnoreCase(String division);
+	List<Champ> findByFirstNameIgnoreCase(String firstName);
+	List<Champ> findByLastNameIgnoreCase(String lastName);
+	List<Champ> findByDefences(Integer defences);
+	List<Champ> findByDivisionIgnoreCase(String division);
 		
 }

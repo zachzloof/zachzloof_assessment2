@@ -16,9 +16,9 @@ public class ChampService implements ServiceInterface<Champ>{
 	private ChampRepo rep;
 	
 	@Autowired
-	public ChampService(ChampRepo rep) {
+	public ChampService(ChampRepo repo) {
 		super();
-		this.rep=rep;
+		this.rep=repo;
 	}
 
 	@Override
@@ -50,8 +50,8 @@ public class ChampService implements ServiceInterface<Champ>{
 		oldChamp.setBonuses(t.getBonuses());
 		oldChamp.setDefences(t.getDefences());
 		oldChamp.setDivision(t.getDivision());
-		oldChamp.setfName(t.getfName());
-		oldChamp.setlName(t.getlName());
+		oldChamp.setFirstName(t.getFirstName());
+		oldChamp.setLastName(t.getLastName());
 		oldChamp.setLosses(t.getLosses());
 		oldChamp.setWins(t.getWins());
 		
@@ -65,23 +65,23 @@ public class ChampService implements ServiceInterface<Champ>{
 		this.rep.deleteById(id);
 	}
 	
-	public List<Champ> getChampByFName(String fName) {
-		List<Champ> championList = this.rep.findbyFNameIgnoreCase(fName);
+	public List<Champ> getChampByFirstName(String fName) {
+		List<Champ> championList = this.rep.findByFirstNameIgnoreCase(fName);
 		return championList;
 	}
 	
-	public List<Champ> getChampByLName(String lName) {
-		List<Champ> championList = this.rep.findbyLNameIgnoreCase(lName);
+	public List<Champ> getChampByLastName(String lName) {
+		List<Champ> championList = this.rep.findByLastNameIgnoreCase(lName);
 		return championList;
 	}
 	
 	public List<Champ> getChampByDefences(Integer defences) {
-		List<Champ> championList = this.rep.findbyDefences(defences);
+		List<Champ> championList = this.rep.findByDefences(defences);
 		return championList;
 	}
 	
 	public List<Champ> getChampByDivision(String division) {
-		List<Champ> championList = this.rep.findbyDivisionIgnoreCase(division);
+		List<Champ> championList = this.rep.findByDivisionIgnoreCase(division);
 		return championList;
 	}
 
