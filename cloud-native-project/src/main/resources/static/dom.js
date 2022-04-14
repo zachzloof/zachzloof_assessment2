@@ -8,3 +8,4 @@ export const createDefencesInput = document.getElementById(`input-defences`);
 export const createBonusesInput = document.getElementById(`input-bonuses`);
 export const createDivisionInput = document.getElementById(`input-division`);
 export const createButton = document.getElementById(`create-button`);
+export const readAllButton = document.getElementById(`read-all-button`);

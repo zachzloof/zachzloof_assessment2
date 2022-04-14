@@ -44,3 +44,4 @@ const createChamp = () => {
   }
 
   DOM.createButton.onclick = () => createChamp();
+  DOM.readAllButton.onclick = () => refresh();
