@@ -1,0 +1,2 @@
+insert into champ (firstName, last_name, age, wins, losses, defences, bonuses, division) values ('nate', 'diaz', 35, 20, 10, 0, 5, 'welterweight');
+insert into champ (irstName, last_name, age, wins, losses, defences, bonuses, division) values ('israel', 'adesanya', 28, 28, 1, 5, 7, 'middleweight');
