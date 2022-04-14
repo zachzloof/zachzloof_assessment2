@@ -41,5 +41,29 @@ public class ChampController {
 	public Champ getChampionById(@PathVariable Integer id) {
 		return this.service.getById(id);
 	}
+	
+	@GetMapping("/getByFName/{fName}")
+	public ResponseEntity<List<Champ>> getChampionsByFirstName(@PathVariable String fName) {
+		List<Champ> list = this.service.getChampByFName(fName);
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping("/getByLName/{lName}")
+	public ResponseEntity<List<Champ>> getChampionsByLastName(@PathVariable String lName) {
+		List<Champ> list = this.service.getChampByFName(lName);
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping("/getByDefences/{defences}")
+	public ResponseEntity<List<Champ>> getChampionsByDefences(@PathVariable Integer defences) {
+		List<Champ> list = this.service.getChampByDefences(defences);
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping("/getByDefences/{division}")
+	public ResponseEntity<List<Champ>> getChampionsByDivision(@PathVariable String division) {
+		List<Champ> list = this.service.getChampByDivision(division);
+		return ResponseEntity.ok(list);
+	}
 
 }
