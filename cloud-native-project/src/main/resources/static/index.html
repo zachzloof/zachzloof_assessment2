@@ -24,6 +24,7 @@
                 <h2 id="create-heading">
                     Create Form Below
                 </h2>
+
                 <input type="text" id="input-first-name" placeholder="Enter the first name of the champion you would like to add">
                 <input type="text" id="input-last-name" placeholder="Enter the last name of the champion you would like to add">
                 <input type="number" id="input-age" placeholder="Enter the age of the champion you would like to add">
@@ -32,14 +33,13 @@
                 <input type="number" id="input-defences" placeholder="Enter the amount of defences the champion has">
                 <input type="number" id="input-bonuses" placeholder="Enter the amount of bonuses of the champion has">
                 <input type="text" id="input-divsion" placeholder="Enter the weight class of the champion you would like to add">
-                <button type="button" id="read-one-button">CREATE MY CHAMPION</button>
+                <button type="button" id="create-button">CREATE MY CHAMPION</button>
             </form>
 
             <form id="read-form">
                 <h2 id="read-heading">
                     Read Form Below
                 </h2>
-
                 <h3>
                     Read All
                 </h3>
@@ -73,7 +73,22 @@
                 </h3>
                 <input type="text" id="input-read-division" placeholder="Enter the weight class you would like to filter the database from">
                 <button type="button" id="read-division-button">SEARCH BY WEIGHT CLASS</button>
+            </form>
 
+            <form id="update-form">
+                <h2 id="update-heading">
+                    Update Form Below
+                </h2>
+                <input type="number" id="input-update-id" placeholder="Enter the id of the champion you would like to update">
+                <input type="text" id="input-update-firstname" placeholder="Enter the first name of the champion you would like to replace">
+                <input type="text" id="input-update-lastname" placeholder="Enter the last name of the champion you would like to replace">
+                <input type="number" id="input-update-age" placeholder="Enter the age of the champion you would like to replace">
+                <input type="number" id="input-update-wins" placeholder="Enter the amount of wins the champion has">
+                <input type="number" id="input-update-losses" placeholder="Enter the amount of losses the champion has">
+                <input type="number" id="input-update-defences" placeholder="Enter the amount of defences the champion has">
+                <input type="number" id="input-update-bonuses" placeholder="Enter the amount of bonuses of the champion has">
+                <input type="text" id="input-update-divsion" placeholder="Enter the weight class of the champion you would like to replace">
+                <button type="button" id="update-button">UPDATE MY CHAMPION</button>
             </form>
         </div>
     </div>
