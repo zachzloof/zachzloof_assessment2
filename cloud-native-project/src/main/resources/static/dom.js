@@ -11,6 +11,8 @@ export const createDivisionInput = document.getElementById(`input-division`);
 export const createButton = document.getElementById(`create-button`);
 //READ
 export const readAllButton = document.getElementById(`read-all-button`);
-export const readByIdInput = document.getElementById(`read-one-button`);
+export const readByIdButton = document.getElementById(`read-one-button`);
 export const readByFirstNameInput = document.getElementById(`input-read-firstname`);
+export const readByLastNameInput = document.getElementById(`input-read-lastname`);
 export const readByFirstNameButton = document.getElementById(`read-firstname-button`);
+export const readByLastNameButton = document.getElementById(`read-lastname-button`);
