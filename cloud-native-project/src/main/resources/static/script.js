@@ -12,8 +12,8 @@ let addChamp = champ => {
 
 const createChamp = () => {
     axios.post(`http://localhost:8080/create`, {
-      firstName: DOM.createFNameInput.value,
-      lastName: DOM.createLNameInput.value,
+      firstName: DOM.createFirstNameInput.value,
+      lastName: DOM.createLastNameInput.value,
       age: DOM.createAgeInput.value,
       wins: DOM.createWinsInput.value,
       losses: DOM.createLossesInput.value,
@@ -111,6 +111,25 @@ const createChamp = () => {
     });
   }
 
+  const updateChamp = () => {
+    let id = DOM.updateIdInput.value
+    axios.put(`/update/` + id, {
+      firstName: DOM.updateFirstNameInput.value,
+      lastName: DOM.updateLastNameInput.value,
+      age: DOM.updateAgeInput.value,
+      wins: DOM.updateWinsInput.value,
+      losses: DOM.updateLossesInput.value,
+      defences: DOM.updateDefencesInput.value,
+      bonuses: DOM.updateBonusesInput.value,
+      division: DOM.updateDivisionInput.value
+    }).then((res) => {
+      console.log(res);
+      refresh()
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
   DOM.createButton.onclick = () => createChamp();
   DOM.readAllButton.onclick = () => refresh();
   DOM.readByIdButton.onclick = () => readById();
@@ -118,3 +137,4 @@ const createChamp = () => {
   DOM.readByFirstNameButton.onclick = () => readByFirstName();
   DOM.readByLastNameButton.onclick = () => readByLastName();
   DOM.readByDefencesButton.onclick = () => readByDefences();
+  DOM.updateButton.onclick = () => updateChamp();

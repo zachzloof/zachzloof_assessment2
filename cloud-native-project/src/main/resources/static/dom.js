@@ -1,8 +1,8 @@
 export const output = document.getElementById(`display-list-output`);
 
-//CREATE
-export const createFNameInput = document.getElementById(`input-first-name`);
-export const createLNameInput = document.getElementById(`input-last-name`);
+// CREATE
+export const createFirstNameInput = document.getElementById(`input-first-name`);
+export const createLastNameInput = document.getElementById(`input-last-name`);
 export const createAgeInput = document.getElementById(`input-age`);
 export const createWinsInput = document.getElementById(`input-wins`);
 export const createLossesInput = document.getElementById(`input-losses`);
@@ -11,7 +11,7 @@ export const createBonusesInput = document.getElementById(`input-bonuses`);
 export const createDivisionInput = document.getElementById(`input-division`);
 
 export const createButton = document.getElementById(`create-button`);
-//READ
+// READ
 export const readAllButton = document.getElementById(`read-all-button`);
 
 export const readByIdButton = document.getElementById(`read-one-button`);
@@ -27,3 +27,17 @@ export const readByDefencesInput = document.getElementById(`input-read-defences`
 
 export const readByDivisionButton = document.getElementById(`read-division-button`);
 export const readByDivisionInput = document.getElementById(`input-read-division`);
+
+
+// UPDATE
+export const updateIdInput = document.getElementById(`input-update-id`);
+export const updateFirstNameInput = document.getElementById(`input-update-firstname`);
+export const updateLastNameInput = document.getElementById(`input-update-lastname`);
+export const updateAgeInput = document.getElementById(`input-update-age`);
+export const updateWinsInput = document.getElementById(`input-update-wins`);
+export const updateLossesInput = document.getElementById(`input-update-losses`);
+export const updateDefencesInput = document.getElementById(`input-update-defences`);
+export const updateBonusesInput = document.getElementById(`input-update-bonuses`);
+export const updateDivisionInput = document.getElementById(`input-update-division`);
+
+export const updateButton = document.getElementById(`update-button`);
