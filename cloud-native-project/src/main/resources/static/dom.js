@@ -41,3 +41,8 @@ export const updateBonusesInput = document.getElementById(`input-update-bonuses`
 export const updateDivisionInput = document.getElementById(`input-update-division`);
 
 export const updateButton = document.getElementById(`update-button`);
+
+// DELETE
+export const deleteIdInput = document.getElementById(`input-delete-id`);
+
+export const deleteButton = document.getElementById(`delete-button`);

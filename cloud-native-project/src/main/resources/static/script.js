@@ -113,7 +113,7 @@ const createChamp = () => {
 
   const updateChamp = () => {
     let id = DOM.updateIdInput.value
-    axios.put(`/update/` + id, {
+    axios.put(`/replace/` + id, {
       firstName: DOM.updateFirstNameInput.value,
       lastName: DOM.updateLastNameInput.value,
       age: DOM.updateAgeInput.value,
@@ -130,6 +130,17 @@ const createChamp = () => {
     });
   }
 
+  const deleteChamp = () => {
+    let id = DOM.deleteIdInput.value;
+    axios.delete(`/remove/` + id)
+      .then((res) => {
+        console.log(res);
+        refresh();
+      }).catch((err) => {
+        console.log(err);
+      });
+  }
+  
   DOM.createButton.onclick = () => createChamp();
   DOM.readAllButton.onclick = () => refresh();
   DOM.readByIdButton.onclick = () => readById();
@@ -138,3 +149,4 @@ const createChamp = () => {
   DOM.readByLastNameButton.onclick = () => readByLastName();
   DOM.readByDefencesButton.onclick = () => readByDefences();
   DOM.updateButton.onclick = () => updateChamp();
+  DOM.deleteButton.onclick = () => deleteChamp();
