@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -64,6 +65,13 @@ public class ChampController {
 	public ResponseEntity<List<Champ>> getChampionsByDivision(@PathVariable String division) {
 		List<Champ> list = this.service.getChampByDivision(division);
 		return ResponseEntity.ok(list);
+	}
+	
+	@PutMapping("/replace/{id}")
+	public ResponseEntity<Champ> updateChampion(@PathVariable Integer id, @RequestBody Champ newChampion) {
+		Champ body = this.service.replace(id, newChampion);
+		ResponseEntity<Champ> res = new ResponseEntity<Champ>(body, HttpStatus.ACCEPTED);
+		return res;
 	}
 
 }
