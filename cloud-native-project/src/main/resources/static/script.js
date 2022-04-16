@@ -140,6 +140,26 @@ const createChamp = () => {
         console.log(err);
       });
   }
+
+  const darkMode = () => {
+    let body = document.querySelector(`body`);
+    let html = document.querySelector(`html`);
+    let buttons = document.querySelectorAll(`button`);
+    let inputs = document.querySelectorAll(`input`);
+    body.style.backgroundColor = `#1C1C1C`;
+    body.style.color = `darkgray`;
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].style.backgroundColor = `#1C1C1C`;
+      buttons[i].style.color = `darkgray`;
+    }
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].style.backgroundColor = `darkgray`;
+    }
+    // child2[9].style.backgroundColor = `darkgray`;
+    html.appendChild(body);
+    body.appendChild(buttons);
+    body.appendChild(inputs);
+  }
   
   DOM.createButton.onclick = () => createChamp();
   DOM.readAllButton.onclick = () => refresh();
@@ -150,3 +170,4 @@ const createChamp = () => {
   DOM.readByDefencesButton.onclick = () => readByDefences();
   DOM.updateButton.onclick = () => updateChamp();
   DOM.deleteButton.onclick = () => deleteChamp();
+  DOM.darkModeButton.onclick = () => darkMode();

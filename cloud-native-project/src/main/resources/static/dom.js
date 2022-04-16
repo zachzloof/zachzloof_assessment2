@@ -46,3 +46,6 @@ export const updateButton = document.getElementById(`update-button`);
 export const deleteIdInput = document.getElementById(`input-delete-id`);
 
 export const deleteButton = document.getElementById(`delete-button`);
+
+//EXTRA
+export const darkModeButton = document.getElementById(`darkmode-button`)
