@@ -1,6 +1,7 @@
 package com.qa.demo.web;
 
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -40,13 +41,59 @@ public class ChampControllerIntegrationTest {
 		Champ testChamp = new Champ(null, "nate", "diaz", 30, 25, 10, 0, 2, "welterweight");
 		String testChampAsJSON = this.mapper.writeValueAsString(testChamp);
 		RequestBuilder request = post("/create").contentType(MediaType.APPLICATION_JSON).content(testChampAsJSON);
-
 		Champ testCreatedChamp = new Champ(3, "nate", "diaz", 30, 25, 10, 0, 2, "welterweight");
-		String testCreatedPersonAsJSON = this.mapper.writeValueAsString(testCreatedChamp);
-
+		String testCreatedChampAsJSON = this.mapper.writeValueAsString(testCreatedChamp);
 		ResultMatcher checkStatus = status().isCreated();
-		ResultMatcher checkBody = content().json(testCreatedPersonAsJSON);
+		ResultMatcher checkBody = content().json(testCreatedChampAsJSON);
+		
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getAllTest() throws Exception {
+		RequestBuilder request = get("/getAll");
+		List<Champ> testChampions = List.of(new Champ(1, "nate", "diaz", 35, 20, 10, 0, 5, "welterweight"), new Champ(2, "israel", "adesanya", 28, 28, 1, 5, 7, "middleweight"));
+		String json = this.mapper.writeValueAsString(testChampions);
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
 
 		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
 	}
+	
+	@Test
+	void getByIdTest() throws Exception {
+		RequestBuilder request = get("/get/2");
+		String json = this.mapper.writeValueAsString(new Champ(2, "israel", "adesanya", 28, 28, 1, 5, 7, "middleweight"));
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getByFirstNameTest() throws Exception {
+		RequestBuilder request = get("/getByFName/israel");
+
+		List<Champ> testChampions = List.of(new Champ(2, "israel", "adesanya", 28, 28, 1, 5, 7, "middleweight"));
+		String json = this.mapper.writeValueAsString(testChampions);
+
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getByLastNameTest() throws Exception {
+		RequestBuilder request = get("/getByLName/diaz");
+
+		List<Champ> testChampions = List.of(new Champ(1, "nate", "diaz", 35, 20, 10, 0, 5, "welterweight"));
+		String json = this.mapper.writeValueAsString(testChampions);
+
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
 }
