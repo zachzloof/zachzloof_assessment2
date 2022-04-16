@@ -96,4 +96,30 @@ public class ChampControllerIntegrationTest {
 		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
 	}
 	
+	@Test
+	void getByDefencesTest() throws Exception {
+		RequestBuilder request = get("/getByDefences/0");
+
+		List<Champ> testChampions = List.of(new Champ(1, "nate", "diaz", 35, 20, 10, 0, 5, "welterweight"));
+		String json = this.mapper.writeValueAsString(testChampions);
+
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getByDivisionTest() throws Exception {
+		RequestBuilder request = get("/getByDivision/welterweight");
+
+		List<Champ> testChampions = List.of(new Champ(1, "nate", "diaz", 35, 20, 10, 0, 5, "welterweight"));
+		String json = this.mapper.writeValueAsString(testChampions);
+
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(json);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
 }
