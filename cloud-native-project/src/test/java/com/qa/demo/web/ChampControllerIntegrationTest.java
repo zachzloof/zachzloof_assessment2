@@ -1,8 +1,10 @@
 package com.qa.demo.web;
 
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -120,6 +122,26 @@ public class ChampControllerIntegrationTest {
 		ResultMatcher checkBody = content().json(json);
 
 		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void testReplace() throws Exception {
+		Champ testChamp = new Champ(null, "max", "holloway", 28, 35, 4, 8, 5, "featherweight");
+		String testChampAsJSON = this.mapper.writeValueAsString(testChamp);
+		RequestBuilder request = put("/replace/1").contentType(MediaType.APPLICATION_JSON).content(testChampAsJSON);
+		
+		Champ testUpdatedChamp = new Champ(1, "max", "holloway", 28, 35, 4, 8, 5, "featherweight");
+		String testUpdatedChampAsJSON = this.mapper.writeValueAsString(testUpdatedChamp);
+		
+		ResultMatcher checkStatus = status().isAccepted();
+		ResultMatcher checkBody = content().json(testUpdatedChampAsJSON);
+		
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void testRemove() throws Exception {
+		this.mvc.perform(delete("/remove/1")).andExpect(status().isNoContent());
 	}
 	
 }
