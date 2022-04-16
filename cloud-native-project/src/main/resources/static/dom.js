@@ -46,3 +46,15 @@ export const updateButton = document.getElementById(`update-button`);
 export const deleteIdInput = document.getElementById(`input-delete-id`);
 
 export const deleteButton = document.getElementById(`delete-button`);
+
+//EXTRA
+export const darkModeButton = document.getElementById(`darkmode-button`)
+
+export const flyweightList = document.getElementById(`flyweight-list`);
+export const bantamweightList = document.getElementById(`bantamweight-list`);
+export const featherweightList = document.getElementById(`featherweight-list`);
+export const lightweightList = document.getElementById(`lightweight-list`);
+export const welterweightList = document.getElementById(`welterweight-list`);
+export const middleweightList = document.getElementById(`middleweight-list`);
+export const lightHeavyweightList = document.getElementById(`light-heavyweight-list`);
+export const heavyweightList = document.getElementById(`heavyweight-list`);

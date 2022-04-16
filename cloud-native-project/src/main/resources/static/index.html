@@ -17,125 +17,180 @@
 <body>
     <div id="main-container" class="container-fluid" style="text-align:center">
         <h1>
-            UFC Champion CRUD Application
+            <u>UFC Champion CRUD Application</u>
         </h1>
-        <p>
-            This page will give you the ability to interact with a database. You will have create, read, update and
-            delete permissions to the database.
-        </p>
         <div id="row" class="row">
-            <div id="all-the-forms" class="col-md-4">
+            <div id="create-read-forms" class="col-md-2">
                 <form id="create-form">
                     <h2 id="create-heading">
-                        Create Form Below
+                        Create
                     </h2>
-
-                    <input type="text" id="input-first-name"
-                        placeholder="Enter the first name of the champion you would like to add" class="form-control">
-                    <input type="text" id="input-last-name"
-                        placeholder="Enter the last name of the champion you would like to add" class="form-control">
-                    <input type="number" id="input-age"
-                        placeholder="Enter the age of the champion you would like to add" class="form-control">
-                    <input type="number" id="input-wins" placeholder="Enter the amount of wins the champion has" class="form-control">
-                    <input type="number" id="input-losses" placeholder="Enter the amount of losses the champion has" class="form-control">
-                    <input type="number" id="input-defences"
-                        placeholder="Enter the amount of defences the champion has" class="form-control">
-                    <input type="number" id="input-bonuses"
-                        placeholder="Enter the amount of bonuses of the champion has" class="form-control">
-                    <input type="text" id="input-division"
-                        placeholder="Enter the weight class of the champion you would like to add" class="form-control">
-                    <button type="button" id="create-button">CREATE MY CHAMPION</button>
-                </form>
-
-                <form id="read-form">
-                    <h2 id="read-heading">
-                        Read Form Below
-                    </h2>
-                    <h3>
-                        Read All
-                    </h3>
-                    <button type="button" id="read-all-button">ALL UFC CHAMPIONS</button>
-                    <h3>
-                        Read By ID
-                    </h3>
-                    <input type="number" id="input-read-id"
-                        placeholder="Enter the ID of the champion you would like to read from the database" class="form-control">
-                    <button type="button" id="read-one-button">FIND MY CHAMPION</button>
-
-                    <h3>
-                        Read By First Name
-                    </h3>
-                    <input type="text" id="input-read-firstname"
-                        placeholder="Enter the first name you would like to filter the database from" class="form-control">
-                    <button type="button" id="read-firstname-button">SEARCH BY FIRST NAME</button>
-
-                    <h3>
-                        Read By Second Name
-                    </h3>
-                    <input type="text" id="input-read-lastname"
-                        placeholder="Enter the last name you would like to filter the database from" class="form-control">
-                    <button type="button" id="read-lastname-button">SEARCH BY LAST NAME</button>
-                    
-                    <h3>
-                        Read By Defences
-                    </h3>
-                    <input type="number" id="input-read-defences"
-                        placeholder="Enter the amount of defences you would like to filter the database from" class="form-control">
-                    <button type="button" id="read-defences-button">SEARCH BY DEFENCES</button>
-
-                    <h3>
-                        Read By Weight Class
-                    </h3>
-                    <input type="text" id="input-read-division"
-                        placeholder="Enter the weight class you would like to filter the database from" class="form-control">
-                    <button type="button" id="read-division-button">SEARCH BY WEIGHT CLASS</button>
-                </form>
-            </div>
-                <div class="col-md-4">
-                <form id="update-form">
-                    <h2 id="update-heading">
-                        Update Form Below
-                    </h2>
-
-                    <input type="number" id="input-update-id"
-                        placeholder="Enter the id of the champion you would like to update" class="form-control">
-                    <input type="text" id="input-update-firstname"
-                        placeholder="Enter the first name of the champion you would like to replace" class="form-control">
-                    <input type="text" id="input-update-lastname"
-                        placeholder="Enter the last name of the champion you would like to replace" class="form-control">
-                    <input type="number" id="input-update-age"
-                        placeholder="Enter the age of the champion you would like to replace" class="form-control">
-                    <input type="number" id="input-update-wins" placeholder="Enter the amount of wins the champion has" class="form-control">
-                    <input type="number" id="input-update-losses"
-                        placeholder="Enter the amount of losses the champion has" class="form-control">
-                    <input type="number" id="input-update-defences"
-                        placeholder="Enter the amount of defences the champion has" class="form-control">
-                    <input type="number" id="input-update-bonuses"
-                        placeholder="Enter the amount of bonuses of the champion has" class="form-control">
-                    <input type="text" id="input-update-division"
-                        placeholder="Enter the weight class of the champion you would like to replace" class="form-control">
-                    <button type="button" id="update-button">UPDATE MY CHAMPION</button>
+                    <div class="form-floating">
+                        <input type="text" id="input-first-name" class="form-control"
+                            placeholder="First name of the champion">
+                        <label for="input-first-name">
+                            First name of the champion
+                        </label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id="input-last-name" class="form-control"
+                            placeholder="Last name of the champion">
+                        <label for="input-last-name">
+                            Last name of the champion
+                        </label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-age" class="form-control" placeholder="Age of the champion">
+                        <label for="input-age">
+                            Age of the champion
+                        </label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-wins" class="form-control" placeholder="Amount of wins">
+                        <label for="input-wins">Amount of wins</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-losses" class="form-control" placeholder="Amount of losses">
+                        <label for="input-losses">Amount of losses</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-defences" class="form-control" placeholder="Amount of defences">
+                        <label for="input-defences">Amount of defences</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-bonuses" class="form-control" placeholder="Amount of bonuses">
+                        <label for="input-bonuses">Amount of bonuses</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id="input-division" placeholder="Select weight class" class="form-control">
+                        <label for="input-division">Weight class</label>
+                    </div>
+                    <button type="button" id="create-button" class="btn-primary" style="margin-bottom: 0px;"><u>CREATE
+                            MY CHAMPION</u></button>
                 </form>
 
                 <form id="delete-form">
                     <h2 id="delete-heading">
-                        Delete Form Below
+                        Delete
                     </h2>
-
-                    <input type="number" id="input-delete-id"
-                        placeholder="Enter the id of the champion you would like to delete" class="form-control">
-                    <button type="button" id="delete-button">DELETE THIS CHAMPION</button>
+                    <div class="form-floating">
+                        <input type="number" id="input-delete-id" placeholder="ID of the champion" class="form-control">
+                        <label for="input-delete-id">ID of the champion</label>
+                    </div>
+                    <button type="button" id="delete-button" class="btn-primary" style="margin-bottom: 0px;"><u>DELETE
+                            THIS CHAMPION</u></button>
                 </form>
             </div>
-            
 
-            <div id="display-div" class="col-md-2">
-                <h2>DATABASE:</h2>
-                <p id="display-para">
+            <div id="read-form-div" class="col-md-2">
+                <form id="read-form">
+                    <h2 id="read-heading">
+                        Read
+                    </h2>
+
+                    <button type="button" id="read-all-button" class="btn-primary"><u>ALL UFC CHAMPIONS</u></button>
+                    <div class="form-floating">
+                        <input type="number" id="input-read-id" class="form-control" placeholder="Read by ID">
+                        <label for="input-read-id">Read by ID</label>
+                    </div>
+
+                    <button type="button" id="read-one-button" class="btn-primary"><u>FIND MY CHAMPION</u></button>
+                    <div class="form-floating">
+                        <input type="text" id="input-read-firstname" placeholder="Read by first name"
+                            class="form-control">
+                        <label for="input-read-firstname">Read by first name</label>
+                    </div>
+
+                    <button type="button" id="read-firstname-button" class="btn-primary"><u>SEARCH BY FIRST
+                            NAME</u></button>
+                    <div class="form-floating">
+                        <input type="text" id="input-read-lastname" placeholder="Read by last name"
+                            class="form-control">
+                        <label for="input-read-lastname">Read by last name</label>
+                    </div>
+                    <button type="button" id="read-lastname-button" class="btn-primary"><u>SEARCH BY LAST
+                            NAME</u></button>
+                    <div class="form-floating">
+                        <input type="number" id="input-read-defences" class="form-control"
+                            placeholder="Read by defences">
+                        <label for="input-read-defences">Read by defences</label>
+                    </div>
+                    <button type="button" id="read-defences-button" class="btn-primary"><u>SEARCH BY
+                            DEFENCES</u></button>
+                    <div class="form-floating">
+                        <input type="text" id="input-read-division" placeholder="Read by weight class"
+                            class="form-control">
+                        <label for="input-read-division">Read by weight class</label>
+                    </div>
+                    <button type="button" id="read-division-button" class="btn-primary"><u>SEARCH BY WEIGHT
+                            CLASS</u></button>
+                    <button type="button" id="darkmode-button" class="btn-primary"
+                        style="background-color: black; width: auto;"><u>DARKMODE</u></button>
+                </form>
+            </div>
+            <div class="col-md-2">
+                <form id="update-form">
+                    <h2 id="update-heading">
+                        Update
+                    </h2>
+                    <div class="form-floating">
+                        <input type="number" id="input-update-id" placeholder="ID of the champion" class="form-control">
+                        <label for="input-update-id">ID of the champion</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id="input-update-firstname" placeholder="First name of the champion"
+                            class="form-control">
+                        <label for="input-update-firstname">First name of the champion</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id="input-update-lastname" placeholder="Last name of the champion"
+                            class="form-control">
+                        <label for="input-update-lastname">Last name of the champion</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-update-age" placeholder="Age of the champion"
+                            class="form-control">
+                        <label for="input-update-age">Age of the champion</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-update-wins" placeholder="Amount of wins" class="form-control">
+                        <label for="input-update-wins">Amount of wins</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-update-losses" placeholder="Amount of losses"
+                            class="form-control">
+                        <label for="input-update-losses">Amount of losses</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-update-defences" placeholder="Amount of defences"
+                            class="form-control">
+                        <label for="input-update-losses">Amount of losses</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" id="input-update-bonuses" placeholder="Amount of bonuses"
+                            class="form-control">
+                        <label for="input-update-bonuses">Amount of bonuses</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id="input-update-division" placeholder="Weight class" class="form-control">
+                        <label for="input-update-division">Weight class</label>
+                    </div>
+                    <button type="button" id="update-button" class="btn-primary"><u> UPDATE MY CHAMPION</u></button>
+                </form>
+            </div>
+
+            <div id="display-div" class="col-md-6">
+                <h2>Database:</h2>
+                <p id="welcome-paragraph"><i><u>
+                            This page will give you the ability to interact with a database. You will have create,
+                            read, update and delete permissions to the database.
+                        </u></i></p>
                 <ul id="display-list-output">
-
                 </ul>
-                </p>
+                <button type="button" id="switch-button" class="btn-primary"
+                    style="width: auto; margin: auto; display: flex;"
+                    onclick="window.location.href = 'http://localhost:8080/champion-rankings.html';"><u>CHAMPION
+                        RANKINGS PAGE</u></button>
             </div>
         </div>
     </div>
@@ -144,8 +199,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script type="module" src="./script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 
