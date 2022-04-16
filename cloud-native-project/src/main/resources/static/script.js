@@ -142,8 +142,8 @@ const createChamp = () => {
   }
 
   const darkMode = () => {
-    let body = document.querySelector(`body`);
-    let html = document.querySelector(`html`);
+    let body = document.querySelector(`body`); //CHILD AND PARENT FOR BUTTONS AND INPUTS
+    let html = document.querySelector(`html`); //MAIN PARENT
     let buttons = document.querySelectorAll(`button`);
     let inputs = document.querySelectorAll(`input`);
     body.style.backgroundColor = `#1C1C1C`;
@@ -156,8 +156,8 @@ const createChamp = () => {
       inputs[i].style.backgroundColor = `darkgray`;
     }
     // child2[9].style.backgroundColor = `darkgray`;
-    html.appendChild(body);
-    body.appendChild(buttons);
+    html.appendChild(body); 
+    body.appendChild(buttons); // FOR THESE TWO THE BODY IS NOW THE PARENT
     body.appendChild(inputs);
   }
   
