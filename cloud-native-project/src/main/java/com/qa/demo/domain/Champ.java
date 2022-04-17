@@ -1,5 +1,7 @@
 package com.qa.demo.domain;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -140,9 +142,25 @@ public class Champ {
 		public void setDivision(String division) {
 			this.division = division;
 		}
-		
-		// These two methods are my hashcode and equals methods, these will be used for unit testing later on.
-	
 
-	
+		// These two methods are my hashcode and equals methods, these will be used for unit testing later on.
+		@Override
+		public int hashCode() {
+			return Objects.hash(age, bonuses, defences, division, firstName, lastName, losses, wins);
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Champ other = (Champ) obj;
+			return Objects.equals(age, other.age) && Objects.equals(bonuses, other.bonuses)
+					&& Objects.equals(defences, other.defences) && Objects.equals(division, other.division)
+					&& Objects.equals(firstName, other.firstName) && Objects.equals(lastName, other.lastName)
+					&& Objects.equals(losses, other.losses) && Objects.equals(wins, other.wins);
+		}
 }
