@@ -1,4 +1,4 @@
-Coverage: %
+Coverage: 87.9%
 # Cloud Native Project
 ## Introduction
 I was tasked to complete a full stack CRUD application which covered all aspects of my recent training.
@@ -59,6 +59,8 @@ Java Development Kit download instructions:
 10. Now you will need to ammend your path variable within your system variables, to do this find path and press edit.
 11. From here, you will see a path (Second input), go to the very end of the path and add %JAVA_HOME%\bin, and make sure there is a semi colon (;) at the end.
 12. To check that this is working, press the windows button, enter "command prompt" and from here enter "java -version", if you're JDK and version comes up, it has worked:
+
+IMAGE HERE
   
 Maven download instructions: 
 1. [Download](https://maven.apache.org/download.cgi) Download maven from this link
@@ -67,6 +69,8 @@ Maven download instructions:
 4. Next you will want to ammend your path found in the system variables and add %M2_HOME%\bin to the end with a semi colon present (;).
 5. To check that this has worked, type command prompt in the search bar and use the command: mvn -version
 6. If the return is the similar to the screenshot below it is working:
+
+IMAGE HERE
 
 SQL download instructions:
 1. Download the installer from this [link](https://dev.mysql.com/downloads/windows/installer/8.0.html).
@@ -109,8 +113,25 @@ Spring Boot download instructions:
 <img>
 
 ### Getting Everything Working
-These instructions will explain how to get the application working on your screen, as well as how to take a look at what is happening under-the-hood of the application. T
+These instructions will explain how to get the application working on your screen.
 
+Go to [GitHub](https://github.com/) and make an account if you do not already, go to this link once completed - [Inventory Management System](https://github.com/zachzloof/zachzloof_assessment2). From here you want to fork the repository down from github onto your own account, this means that when you clone the application to your computer, you can use github as if it were your own, as it will be your own copy.
+
+From here you will want to go into the forked repository and there will be a green "Code" option in the centre under the navbar if you click on this it will provide you with an remote link for your forked repository, you want to copy the HTTPS link.
+
+Now navigate to your eclipse workshop folder which should exist within your user files, in this file you want to decide where you want this repository to go, once you have decided you will right click and "git bash here". Once this is done you will be presented with a git bash terminal, from here you want to enter: git clone (HTTPS LINK) from here github will download you a fresh ammendable copy of everything from testing to code.
+
+Now you want to open eclipse, you will be asked to start or import a project, you want to import a maven project. From here you will need to navigate to the repository you just cloned and click on the "pom.xml" file, this will add everything you need onto eclipse. Now you will want to navigate to your resources folder, which will be in src/main/resources the file you want to check is application-prod.properties - the password should match the password you used for your SQL root on application start up.
+
+Next you will need to open MySQL, from here you will need to run these lines of code:
+*CREATE DATABASE cloudnative
+*USE cloudnative
+*CREATE TABLE champ (id INTEGER NOT NULL AUTO_INCREMENT, age INTEGER NOT NULL, bonuses INTEGER, defences INTEGER, division VARCHAR(255) NOT NULL, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, losses INTEGER NOT NULL, wins INTEGER NOT NULL, PRIMARY KEY (id));
+
+
+Finally to run the application you will need to - TO DO LIST
+
+MORE TO ADD
 ### Planning Resources
 
 ### Databases
