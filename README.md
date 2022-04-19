@@ -1,13 +1,16 @@
 Coverage: 87.9%
+---------------
 # Cloud Native Project
+----------------------
 ## Introduction
+---------------
 I was tasked to complete a full stack CRUD application which covered all aspects of my recent training.
 I planned this project using a Jira Board, followed by necessary documentation including UML's, and ERD, and a risk assessment for the project.
 Within this project I have used a wide range of tools to achieve a functional application. The application includes a relational database for storing and manipulating data as well as a set of testing procedures for the application.
 The front-end of the application is a fully functional website with and is integrated with the API created with Spring Boot.
 
-### Prerequisite
-
+## Prerequisite
+----------------
 For JDK 17 you will need: 
 * Administrator access
 * Windows: Operating system newer than Windows 7
@@ -44,8 +47,8 @@ For Spring Boot you will need:
 * Eclipse installed and ready to use
 * Administrator access
 
-### Installing
-
+## Installing
+--------------
 Java Development Kit download instructions: 
 1. [Oracle link](https://www.oracle.com/java/technologies/downloads/#java17)
 2. Click on the link from the "Oracle" website, make sure this is the official Oracle website to avoid issues/vulnerabilities.
@@ -112,7 +115,8 @@ Spring Boot download instructions:
 
 <img src="documentation\screenshots\tutorial\spring.png" alt="Spring download">
 
-### Getting Everything Working
+## Getting Everything Working
+-------------------------------
 These instructions will explain how to get the application working on your screen.
 
 Go to [GitHub](https://github.com/) and make an account if you do not already, go to this link once completed - [Cloud Native Assessment](https://github.com/zachzloof/zachzloof_assessment2). From here you want to fork the repository down from github onto your own account, this means that when you clone the application to your computer, you can use github as if it were your own, as it will be your own copy.
@@ -132,7 +136,8 @@ Next you will need to open MySQL, from here you will need to run these lines of 
 Finally to run the application you will need to - TO DO LIST NOT DONE JAR YET
 
 MORE TO ADD
-### Planning Resources and Version Control
+## Planning Resources and Version Control
+-------------------------------------------
 For the planning of my project I used a Jira Kanban board with the scrum feature. Within this I split up the work I intended to do into user stories and tasks to make the work flow more manageable. 
 
 <img src="documentation\screenshots\tutorial\jira-usage.png" alt="Jira usage">
@@ -155,10 +160,42 @@ As for the main functionality of the application, a MySQL database was used, as 
 
 <img src="documentation\Diagrams\ERD.png" alt="ERD representing the only table in the database">
 
-### Back-end:
+## Back-end
+------------
+The back-end of my application was made using SpringBoot, a java framework. Using this framework I started by importing a fresh Spring starter, and from here added my properties and java code.
 
+First I made my domain for the application
 
-#### Testing:
+<img src="documentation\screenshots\backend\changes-domain.png" alt="Champ.java domain being created with values">
+
+This will be used throughout the classes made.
+
+Next I made my repository for the application
+
+<img src="documentation\screenshots\backend\repo-original.png" alt="Repository being made, which adds methods to the service">
+
+This interface will add a whole load of methods for us to use in our service.
+I had an issue with the application due to a problem with how "FName" and "LName" where being read, so this had to be changed to this: 
+
+<img src="documentation\screenshots\backend\vital-changes-repo.png" alt="Vital changes to repository to make the application function">
+
+Next I made my service for the application
+
+<img src="documentation\screenshots\backend\champ-service-original.png" alt="ChampService.java service created ">
+
+The service will be used in the controller.
+
+Next I made my controller for the application
+
+<img src="documentation\screenshots\backend\read-write-methods.png" alt="Read and write methods of the controller class">
+<img src="documentation\screenshots\backend\update-delete-methods.png" alt="Update and delete methods of the controller class">
+
+The controller is the class which maps out the HTML end points for communication to the API, I used Postman to test whether these worked when the SpringBoot application was running. 
+
+Changes to the properties folders were also required for the application to incorporate databases, two different profiles had to be used, one for testing and one for everything else. The prod.properties contained SQL based spring.datasource properties whereas test.properties contained H2 based spring.datasource properties.
+
+## Testing
+--------------
 Integration testing was used for the ChampController.java class, this was done using MockMvc to essentially mock the controller to test whether the endpoints are being used correctly and function as they should.
 
 <img src="documentation\screenshots\testing\testing1.png" alt="Test class being created">
@@ -174,9 +211,11 @@ As for the unit testing that was done, I originally intended on unit testing eve
 FRONT END TESTING TO DO IF HAVE TIME
 
 ## Running the tests
+---------------------
 To run the tests yourself, all you need to do is right click the root of the folder, bring your mouse over "Coverage As". You will see options come up, you will want to select "J-Unit Test", this will give you a set of test results as well as an overall test coverage for the application
 
-### Front-End:
+## Front-End
+-------------
 For the front-end of the application, I used HTML, CSS and JavaScript. I also added bootstrap to make styling more consistent and professional.
 
 <img src="documentation\screenshots\frontend\index6.png" alt="The first version of the main webpage">
@@ -195,7 +234,17 @@ Once darkmode was implemented I was satisfied with the foundation of the page, H
 
 As you can see from this screenshot, there is now a link to another page. I decided that I wanted to implement the database onto another page, meaning that one page interacts with the database (CRUD), whereas the other just reads the database and outputs it to the page.
 
-<img src="documentation\screenshots\frontend\index11.png" alt="The final version of the second webpage">
+<img src="documentation\screenshots\frontend\index10.png" alt="The phone version of the main webpage">
+
+I made sure to make the page react to the size of the window, meaning that laptops and phone users will still have a user friendly experience.
+
+<img src="documentation\screenshots\frontend\index11.png" alt="The first version of the second webpage">
+
+This was the first version of the second page, I was just trying to get the functionality working originally with some basic styling.
+
+<img src="documentation\screenshots\frontend\page2.png" alt="The final version of the second webpage">
+
+This is the final version of the second page, it is not visible from the screenshot but It works fluently, and is styled in a user friendly way.
 
 JavaScript was fundamental to the functionality of the application as it was used to integrate the front end with the API, this was done using axios. Without JavaScript there would be no communication or link from the front-end to the bank-end.
 
@@ -225,6 +274,7 @@ Now looking back at the way I went at this, it could have been done a much more 
 This would be the one thing I would change, as the amount of code used could have been chopped down significantly if I attempted it a different way, however it was a learning process.
   
 ## Authors
+-----------
 
 * **Zachary Zloof** - *From initial work - finished project* - [zachzloof](https://github.com/zachzloof)
 
