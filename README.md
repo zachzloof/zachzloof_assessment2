@@ -60,7 +60,7 @@ Java Development Kit download instructions:
 11. From here, you will see a path (Second input), go to the very end of the path and add %JAVA_HOME%\bin, and make sure there is a semi colon (;) at the end.
 12. To check that this is working, press the windows button, enter "command prompt" and from here enter "java -version", if you're JDK and version comes up, it has worked:
 
-IMAGE HERE
+<img src="documentation\screenshots\tutorial\java.png" alt="Java check">
   
 Maven download instructions: 
 1. [Download](https://maven.apache.org/download.cgi) Download maven from this link
@@ -70,7 +70,7 @@ Maven download instructions:
 5. To check that this has worked, type command prompt in the search bar and use the command: mvn -version
 6. If the return is the similar to the screenshot below it is working:
 
-IMAGE HERE
+<img src="documentation\screenshots\tutorial\maven.png" alt="Maven check">
 
 SQL download instructions:
 1. Download the installer from this [link](https://dev.mysql.com/downloads/windows/installer/8.0.html).
@@ -110,12 +110,12 @@ Spring Boot download instructions:
 2. Go to the "help" dropdown on the nav bar, and you should see "Eclipse marketplace", click this.
 3. Search "Spring" in the searchbar, and the top result SHOULD be the right one, check below that the spring you are selecting is the correct one.
 
-<img>
+<img src="documentation\screenshots\tutorial\spring.png" alt="Spring download">
 
 ### Getting Everything Working
 These instructions will explain how to get the application working on your screen.
 
-Go to [GitHub](https://github.com/) and make an account if you do not already, go to this link once completed - [Inventory Management System](https://github.com/zachzloof/zachzloof_assessment2). From here you want to fork the repository down from github onto your own account, this means that when you clone the application to your computer, you can use github as if it were your own, as it will be your own copy.
+Go to [GitHub](https://github.com/) and make an account if you do not already, go to this link once completed - [Cloud Native Assessment](https://github.com/zachzloof/zachzloof_assessment2). From here you want to fork the repository down from github onto your own account, this means that when you clone the application to your computer, you can use github as if it were your own, as it will be your own copy.
 
 From here you will want to go into the forked repository and there will be a green "Code" option in the centre under the navbar if you click on this it will provide you with an remote link for your forked repository, you want to copy the HTTPS link.
 
@@ -129,42 +129,100 @@ Next you will need to open MySQL, from here you will need to run these lines of 
 *CREATE TABLE champ (id INTEGER NOT NULL AUTO_INCREMENT, age INTEGER NOT NULL, bonuses INTEGER, defences INTEGER, division VARCHAR(255) NOT NULL, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, losses INTEGER NOT NULL, wins INTEGER NOT NULL, PRIMARY KEY (id));
 
 
-Finally to run the application you will need to - TO DO LIST
+Finally to run the application you will need to - TO DO LIST NOT DONE JAR YET
 
 MORE TO ADD
-### Planning Resources
+### Planning Resources and Version Control
+For the planning of my project I used a Jira Kanban board with the scrum feature. Within this I split up the work I intended to do into user stories and tasks to make the work flow more manageable. 
 
+<img src="documentation\screenshots\tutorial\jira-usage.png" alt="Jira usage">
+
+Jira was also very useful for prioritisation and time estimation, for prioritisation I used the MosCow principle (Must have, Should have, Could have, Would have). For the time estimation, I used the story point estimations that are built in with Jira.
+
+As for version control I decided to use GitHub, regularly making feature branches for each aspect of the application, as well as regularly committing within these branches. This was done to maintain control of my work, as I could revert changes at any point or recover previous states of my work should something bad happen.
+
+<img src="documentation\screenshots\tutorial\github-commits.png" alt="GitHub regular committing">
+
+I linked my Jira board with git so that smart commits where possible, this makes it clear which commits relate to which user story or task.
+
+<img src="documentation\screenshots\tutorial\smart-commits1.png" alt="GitHub and Jira linked using smart commits">
 ### Databases
+This project needed databases to store and retrieve information, for testing a simple H2 in-memory database was used, this database interacted with the .sql files within src/main/resources to test the application.
 
-## Running the tests
+<img src="documentation\screenshots\backend\h2-database.png" alt="H2 in-memory database configuration">
+
+As for the main functionality of the application, a MySQL database was used, as this could be used with MySQL Server to allow the application to go live if need be. This ERD will show you how my table was structured to be stored: 
+
+<img src="documentation\Diagrams\ERD.png" alt="ERD representing the only table in the database">
 
 ### Back-end:
+
 
 #### Testing:
 Integration testing was used for the ChampController.java class, this was done using MockMvc to essentially mock the controller to test whether the endpoints are being used correctly and function as they should.
 
-IMAGE - me doing it
+<img src="documentation\screenshots\testing\testing1.png" alt="Test class being created">
 
 This integration test covered the majority of the back-end side of the application, however it didnt cover much for the domain Champ.java, so some unit testing was ideal.
 
-IMAGE - coverage of the integration test
+<img src="documentation\screenshots\testing\testing3.png" alt="Test results with integratation testing">
 
 As for the unit testing that was done, I originally intended on unit testing every class, however after unit testing just the domain, and achieving very high coverage it was clear that further unit testing was not necessary.
 
-IMAGE - me doing it
-IMAGE - coverage of the tests being done together
+<img src="documentation\screenshots\testing\testing4.png" alt="Concluded test results with unit testing and integration testing">
+
+FRONT END TESTING TO DO IF HAVE TIME
+
+## Running the tests
+To run the tests yourself, all you need to do is right click the root of the folder, bring your mouse over "Coverage As". You will see options come up, you will want to select "J-Unit Test", this will give you a set of test results as well as an overall test coverage for the application
 
 ### Front-End:
-For the front-end of the application, I used HTML, CSS and JavaScript. I added bootstrap to make styling more consistent and professional.
+For the front-end of the application, I used HTML, CSS and JavaScript. I also added bootstrap to make styling more consistent and professional.
 
-IMAGES OF FRONT END AND EXPLANATIONS
+<img src="documentation\screenshots\frontend\index6.png" alt="The first version of the main webpage">
 
-JavaScript was fundamental to the functionality of the application as it was used to integrate the front end with the API, this was done using axios
+This was the first version of my front end, this was the original set plan but as time was on my side I decided to spend more time configuring the HTML/CSS.
 
-IMAGE OF AXIOS
-EXPLANATION
-IMAGE OF FUNCTIONALITY
-EXPLANATION
+<img src="documentation\screenshots\frontend\index8.png" alt="The second version of the main webpage">
+
+As you can see the page fits nicely, resulting in a better user experience. However the brightness and long hours was starting to hurt my eyes, so I decided to implement a darkmode button with a little help from JavaScript:
+
+<img src="documentation\screenshots\frontend\index9.png" alt="The third version of the main webpage">
+
+Once darkmode was implemented I was satisfied with the foundation of the page, Here is the final version of the page with the final changes added:
+
+<img src="documentation\screenshots\frontend\final-crud.png" alt="The final version of the main webpage">
+
+As you can see from this screenshot, there is now a link to another page. I decided that I wanted to implement the database onto another page, meaning that one page interacts with the database (CRUD), whereas the other just reads the database and outputs it to the page.
+
+<img src="documentation\screenshots\frontend\index11.png" alt="The final version of the second webpage">
+
+JavaScript was fundamental to the functionality of the application as it was used to integrate the front end with the API, this was done using axios. Without JavaScript there would be no communication or link from the front-end to the bank-end.
+
+<img src="documentation\screenshots\javascript\basic-methods.png" alt="The basic methods finished">
+
+These basic methods were first created in the script.js file, the addChamp method along with the refresh method will be used throughout the script.
+
+<img src="documentation\screenshots\javascript\read-methods.png" alt="The read methods finished">
+
+These read methods were next created, there are more but they are very similar.
+
+<img src="documentation\screenshots\javascript\UD-methods.png" alt="The update and delete methods finished">
+
+These methods were created next, these are my remove and replace methods, which are essential for the udate and remove functionality of the CRUD.
+
+<img src="documentation\screenshots\javascript\darkmode.png" alt="Darkmode added to the application">
+
+This was something I later added when I was styling my HTML further, as the brightness of the page was beginning to hurt my eyes.
+
+As I decided to implement a second webpage, this also meant I had to implement more JavaScript to the program as the second page would need to communicate with the database.
+Now looking back at the way I went at this, it could have been done a much more efficient way using the request "getByDivision" rather than getting all of the information and checking the division manually.
+
+
+<img src="documentation\screenshots\javascript\script2-method-structure.png" alt="script2.js method structure for the axios.get methods">
+<img src="documentation\screenshots\javascript\DOM-extra.png" alt="Extra DOM's required for the second webpage">
+
+This would be the one thing I would change, as the amount of code used could have been chopped down significantly if I attempted it a different way, however it was a learning process.
   
 ## Authors
 
