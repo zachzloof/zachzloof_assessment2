@@ -133,9 +133,8 @@ Next you will need to open MySQL, from here you will need to run these lines of 
 *CREATE TABLE champ (id INTEGER NOT NULL AUTO_INCREMENT, age INTEGER NOT NULL, bonuses INTEGER, defences INTEGER, division VARCHAR(255) NOT NULL, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, losses INTEGER NOT NULL, wins INTEGER NOT NULL, PRIMARY KEY (id));
 
 
-Finally to run the application you will need to - TO DO LIST NOT DONE JAR YET
+Finally to run the application with the .jar file you will need to use GitBash within the 'cloud-native-project' folder which is found in the root. from here you will need to type 'java -jar cloud-native-project-0.0.1-SNAPSHOT.jar' upon pressing enter this will boot the Spring API and you will be able to use the application from Microsoft Edge. Once you have edge open you can go to 'http://localhost:8080/index.html' this will take you to the homepage and the application will be ready to use as long as the api is open (To close the api go into git bash and hit CTRL + C). I had some front end problems using Google Chrome due to accessibility(I assume this problem only occurs on Chrome so there may be other browsers which are fine).
 
-MORE TO ADD
 ## Planning Resources and Version Control
 -------------------------------------------
 For the planning of my project I used a Jira Kanban board with the scrum feature. Within this I split up the work I intended to do into user stories and tasks to make the work flow more manageable. 
@@ -208,8 +207,6 @@ As for the unit testing that was done, I originally intended on unit testing eve
 
 <img src="documentation\screenshots\testing\testing4.png" alt="Concluded test results with unit testing and integration testing">
 
-FRONT END TESTING TO DO IF HAVE TIME
-
 ## Running the tests
 ---------------------
 To run the tests yourself, all you need to do is right click the root of the folder, bring your mouse over "Coverage As". You will see options come up, you will want to select "J-Unit Test", this will give you a set of test results as well as an overall test coverage for the application
@@ -259,6 +256,7 @@ These read methods were next created, there are more but they are very similar.
 <img src="documentation\screenshots\javascript\UD-methods.png" alt="The update and delete methods finished">
 
 These methods were created next, these are my remove and replace methods, which are essential for the udate and remove functionality of the CRUD.
+As you can see originally I made a small error, forgetting to add the "http://localhost:8080/" to these methods, resulting in them creating errors.
 
 <img src="documentation\screenshots\javascript\darkmode.png" alt="Darkmode added to the application">
 
