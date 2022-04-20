@@ -115,7 +115,7 @@ const readByDivision = () => {
 
 const updateChamp = () => {
   let id = DOM.updateIdInput.value
-  axios.put(`/replace/` + id, {
+  axios.put(`http://localhost:8080/replace/` + id, {
     firstName: DOM.updateFirstNameInput.value,
     lastName: DOM.updateLastNameInput.value,
     age: DOM.updateAgeInput.value,
@@ -134,7 +134,7 @@ const updateChamp = () => {
 
 const deleteChamp = () => {
   let id = DOM.deleteIdInput.value;
-  axios.delete(`/remove/` + id)
+  axios.delete(`http://localhost:8080/remove/` + id)
     .then((res) => {
       console.log(res);
       refresh();
