@@ -200,10 +200,11 @@ Integration testing was used for the ChampController.java class, this was done u
 <img src="documentation\screenshots\testing\testing1.png" alt="Test class being created">
 
 This integration test covered the majority of the back-end side of the application, however it didnt cover much for the domain Champ.java, so some unit testing was ideal.
+To unit test the domain, I had to add the equals verifier to my pom.xml file, after this was done I proceeded to testing the domain.
 
 <img src="documentation\screenshots\testing\testing3.png" alt="Test results with integratation testing">
 
-As for the unit testing that was done, I originally intended on unit testing every class, however after unit testing just the domain, and achieving very high coverage it was clear that further unit testing was not necessary.
+I originally intended on unit testing every class, however after unit testing the domain, and achieving very high coverage it was clear that further unit testing was not necessary.
 
 <img src="documentation\screenshots\testing\testing4.png" alt="Concluded test results with unit testing and integration testing">
 

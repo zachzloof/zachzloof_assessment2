@@ -153,14 +153,24 @@ const darkMode = () => {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].style.backgroundColor = `#1C1C1C`;
     buttons[i].style.color = `darkgray`;
+    buttons[i].style.borderColor = `black`;
   }
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].style.backgroundColor = `darkgray`;
   }
-  // child2[9].style.backgroundColor = `darkgray`;
+  // child2[9].style.backgroundColor = `darkgray`; 
   html.appendChild(body);
   body.appendChild(buttons); // FOR THESE TWO THE BODY IS NOW THE PARENT
   body.appendChild(inputs);
+}
+
+const deleteAll = () => {
+  axios.delete(`http://localhost:8080/removeAll`).then((res) => {
+    console.log(res);
+    refresh();
+  }).catch((err) => {
+    console.log(err);
+  }) 
 }
 
 DOM.createButton.onclick = () => createChamp();
@@ -173,3 +183,4 @@ DOM.readByDefencesButton.onclick = () => readByDefences();
 DOM.updateButton.onclick = () => updateChamp();
 DOM.deleteButton.onclick = () => deleteChamp();
 DOM.darkModeButton.onclick = () => darkMode();
+DOM.deleteAllButton.onclick = () => deleteAll();

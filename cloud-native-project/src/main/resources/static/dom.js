@@ -58,3 +58,5 @@ export const welterweightList = document.getElementById(`welterweight-list`);
 export const middleweightList = document.getElementById(`middleweight-list`);
 export const lightHeavyweightList = document.getElementById(`light-heavyweight-list`);
 export const heavyweightList = document.getElementById(`heavyweight-list`);
+
+export const deleteAllButton = document.getElementById(`delete-all-button`);

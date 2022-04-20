@@ -84,6 +84,11 @@ public class ChampService implements ServiceInterface<Champ>{
 		List<Champ> championList = this.rep.findByDivisionIgnoreCase(division);
 		return championList;
 	}
+	
+	public void removeAll() {
+		// TODO Auto-generated method stub
+		this.rep.deleteAllInBatch();
+	}
 
 	
 }

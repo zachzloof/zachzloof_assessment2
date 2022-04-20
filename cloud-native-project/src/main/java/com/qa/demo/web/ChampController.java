@@ -80,5 +80,11 @@ public class ChampController {
 		this.service.remove(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
+	
+	@DeleteMapping("/removeAll")
+	public ResponseEntity<?> deleteAllChampions() {
+		this.service.removeAll();
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
 
 }
