@@ -4,9 +4,14 @@
     margin-bottom: 7px;
     border-radius: 8%;
 }
+.btn-secondary {
+    background-color: red;
+    color: black;
+}
 body {
     background-color: #0B4F6C;
     color: #DCDCDC;
+    height: 100%;
 }
 label {
     color: #0B4F6C;
@@ -19,4 +24,8 @@ label {
 li {
     font-size: 0.85vw;
     list-style-type: none;
+}
+
+html {
+    height: 100%;
 }

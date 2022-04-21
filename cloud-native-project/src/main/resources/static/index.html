@@ -125,7 +125,7 @@
                     <button type="button" id="read-division-button" class="btn-primary"><u>SEARCH BY WEIGHT
                             CLASS</u></button>
                     <button type="button" id="darkmode-button" class="btn-primary"
-                        style="background-color: black; width: auto;"><u>DARKMODE</u></button>
+                        style="background-color: black; width: auto; border-color: darkgray;"><u>DARKMODE</u></button>
                 </form>
             </div>
             <div class="col-md-2">
@@ -187,11 +187,34 @@
                         </u></i></p>
                 <ul id="display-list-output">
                 </ul>
-                <button type="button" id="switch-button" class="btn-primary" style="width: auto; margin: auto; display: flex;"
+                <button type="button" id="switch-button" class="btn-primary"
+                    style="width: auto; margin: auto; display: flex;"
                     onclick="window.location.href = 'http://localhost:8080/champion-rankings.html';"><u>CHAMPION
                         RANKINGS PAGE</u></button>
-                <button type="button" id="delete-all-button" class="btn-primary" style="width: auto; margin: auto; display: flex; margin-top: 1%; background-color: red; border-color: black;"><u>DELETE
-                    ALL CHAMPIONS</u></button>
+                <button type="button" class="btn-primary"
+                    style="width: auto; margin: auto; display: flex; margin-top: 1%; background-color: red; border-color: black;"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"><u>DELETE
+                        ALL CHAMPIONS</u></button>
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: black;">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal-title1"><u>DELETING DATABASE</u></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Proceeding will erase all saved champions on the database, are you sure you want to proceed?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn-secondary" data-bs-dismiss="modal">Actually... maybe not</button>
+                                <button type="button" class="btn-secondary" id="delete-all-button" data-bs-dismiss="modal">DELETE ALL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
