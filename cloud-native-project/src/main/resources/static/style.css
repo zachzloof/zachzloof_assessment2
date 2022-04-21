@@ -1,0 +1,31 @@
+.btn-primary {
+    width:100%;
+    display:block;
+    margin-bottom: 7px;
+    border-radius: 8%;
+}
+.btn-secondary {
+    background-color: red;
+    color: black;
+}
+body {
+    background-color: #0B4F6C;
+    color: #DCDCDC;
+    height: 100%;
+}
+label {
+    color: #0B4F6C;
+}
+.form-control {
+    background-color: #DCDCDC;
+    margin-bottom: 3px;
+    border-radius:5%;
+}
+li {
+    font-size: 0.85vw;
+    list-style-type: none;
+}
+
+html {
+    height: 100%;
+}
