@@ -1,4 +1,9 @@
 Coverage: 87.9%
+
+[Jira Board](https://zachzloof.atlassian.net/jira/software/projects/CN/boards/3)
+
+[Jira Burndown Chart](https://zachzloof.atlassian.net/jira/software/projects/CN/boards/3/reports/burndown)
+
 ---------------
 # Cloud Native Project
 ----------------------
@@ -275,6 +280,6 @@ This would be the one thing I would change, as the amount of code used could hav
 ## Authors
 -----------
 
-* **Zachary Zloof** - *From initial work - finished project* - [zachzloof](https://github.com/zachzloof)
+* **Zachary Zloof** - [zachzloof](https://github.com/zachzloof)
 
 

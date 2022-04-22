@@ -12,7 +12,9 @@ let refreshFlyweight = () => {
                 if ((res.data[i]).division == "flyweight") {
                     let childElement = document.createElement(`li`);
                     childElement.id = ((res.data)[i]).id;
-                    childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                    childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName} &nbsp Last name: ${((res.data)[i]).lastName}
+                     &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins} &nbsp losses: ${((res.data)[i]).losses}
+                      &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses} &nbsp Division: ${((res.data)[i]).division} <br>`;
                     let parentElement = DOM.flyweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -21,7 +23,9 @@ let refreshFlyweight = () => {
             if (res.data.division == "flyweight") {
                 let childElement = document.createElement(`li`);
                 childElement.id = (res.data).id;
-                childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName} &nbsp Last name: ${(res.data).lastName}
+                 &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins} &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences}
+                  &nbsp Bonuses: ${(res.data).bonuses} &nbsp Division: ${(res.data).division} <br>`;
                 let parentElement = DOM.flyweightList;
                 parentElement.appendChild(childElement);
             }
@@ -40,7 +44,10 @@ let refreshBantamweight = () => {
                 if ((res.data[i]).division == "bantamweight") {
                     let childElement = document.createElement(`li`);
                     childElement.id = ((res.data)[i]).id;
-                    childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                    childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName}
+                     &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                      &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                       &nbsp Division: ${((res.data)[i]).division} <br>`;
                     let parentElement = DOM.bantamweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -49,7 +56,9 @@ let refreshBantamweight = () => {
             if (res.data.division == "bantamweight") {
                 let childElement = document.createElement(`li`);
                 childElement.id = (res.data).id;
-                childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName} &nbsp Last name: ${(res.data).lastName}
+                 &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins} &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences}
+                  &nbsp Bonuses: ${(res.data).bonuses} &nbsp Division: ${(res.data).division} <br>`;
                 let parentElement = DOM.bantamweightList;
                 parentElement.appendChild(childElement);
             }
@@ -69,7 +78,10 @@ let refreshFeatherweight = () => {
                     // addChamp((res.data)[i]);
                     let childElement = document.createElement(`li`);
                     childElement.id = ((res.data)[i]).id;
-                    childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                    childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName}
+                     &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                      &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                       &nbsp Division: ${((res.data)[i]).division} <br>`;
                     let parentElement = DOM.featherweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -78,7 +90,10 @@ let refreshFeatherweight = () => {
             if (res.data.division == "featherweight") {
                 let childElement = document.createElement(`li`);
                 childElement.id = (res.data).id;
-                childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName}
+                 &nbsp Last name: ${(res.data).lastName} &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins}
+                  &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences} &nbsp Bonuses: ${(res.data).bonuses}
+                   &nbsp Division: ${(res.data).division} <br>`;
                 let parentElement = DOM.feathweightList;
                 parentElement.appendChild(childElement);
             }
@@ -98,7 +113,10 @@ let refreshLightweight = () => {
                     // addChamp((res.data)[i]);
                     let childElement = document.createElement(`li`);
                     childElement.id = ((res.data)[i]).id;
-                    childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                    childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName}
+                     &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                      &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                       &nbsp Division: ${((res.data)[i]).division} <br>`;
                     let parentElement = DOM.lightweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -107,7 +125,9 @@ let refreshLightweight = () => {
             if (res.data.division == "lightweight") {
                 let childElement = document.createElement(`li`);
                 childElement.id = (res.data).id;
-                childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName} &nbsp Last name: ${(res.data).lastName}
+                 &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins} &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences}
+                  &nbsp Bonuses: ${(res.data).bonuses} &nbsp Division: ${(res.data).division} <br>`;
                 let parentElement = DOM.lightweightList;
                 parentElement.appendChild(childElement);
             }
@@ -127,7 +147,10 @@ let refreshWeltwerweight = () => {
                         // addChamp((res.data)[i]);
                         let childElement = document.createElement(`li`);
                         childElement.id = ((res.data)[i]).id;
-                        childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                        childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName} 
+                        &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                         &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                          &nbsp Division: ${((res.data)[i]).division} <br>`;
                         let parentElement = DOM.welterweightList;
                         parentElement.appendChild(childElement);
                     }
@@ -136,7 +159,9 @@ let refreshWeltwerweight = () => {
                 if (res.data.division == "welterweight") {
                     let childElement = document.createElement(`li`);
                     childElement.id = (res.data).id;
-                    childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                    childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName} &nbsp Last name: ${(res.data).lastName}
+                     &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins} &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences}
+                      &nbsp Bonuses: ${(res.data).bonuses} &nbsp Division: ${(res.data).division} <br>`;
                     let parentElement = DOM.welterweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -156,7 +181,10 @@ let refreshMiddleweight = () => {
                         // addChamp((res.data)[i]);
                         let childElement = document.createElement(`li`);
                         childElement.id = ((res.data)[i]).id;
-                        childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                        childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName}
+                         &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                          &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                           &nbsp Division: ${((res.data)[i]).division} <br>`;
                         let parentElement = DOM.middleweightList;
                         parentElement.appendChild(childElement);
                     }
@@ -165,7 +193,10 @@ let refreshMiddleweight = () => {
                 if (res.data.division == "middleweight") {
                     let childElement = document.createElement(`li`);
                     childElement.id = (res.data).id;
-                    childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                    childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName}
+                     &nbsp Last name: ${(res.data).lastName} &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins}
+                      &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences} &nbsp Bonuses: ${(res.data).bonuses}
+                       &nbsp Division: ${(res.data).division} <br>`;
                     let parentElement = DOM.middleweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -185,7 +216,10 @@ let refreshLightHeavyweight = () => {
                         // addChamp((res.data)[i]);
                         let childElement = document.createElement(`li`);
                         childElement.id = ((res.data)[i]).id;
-                        childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                        childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName}
+                         &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                          &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                           &nbsp Division: ${((res.data)[i]).division} <br>`;
                         let parentElement = DOM.lightHeavyweightList;
                         parentElement.appendChild(childElement);
                     }
@@ -194,7 +228,9 @@ let refreshLightHeavyweight = () => {
                 if (res.data.division == "light-heavyweight" || res.data.division == "lightheavyweight") {
                     let childElement = document.createElement(`li`);
                     childElement.id = (res.data).id;
-                    childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                    childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName}
+                     &nbsp Last name: ${(res.data).lastName} &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins}
+                      &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences} &nbsp Bonuses: ${(res.data).bonuses} &nbsp Division: ${(res.data).division} <br>`;
                     let parentElement = DOM.lightHeavyweightList;
                     parentElement.appendChild(childElement);
                 }
@@ -214,7 +250,10 @@ let refreshHeavyweight = () => {
                         // addChamp((res.data)[i]);
                         let childElement = document.createElement(`li`);
                         childElement.id = ((res.data)[i]).id;
-                        childElement.innerHTML = `${JSON.stringify((res.data)[i])}`;
+                        childElement.innerHTML = `<b>ID: ${((res.data)[i]).id}</b> &nbsp First name: ${((res.data)[i]).firstName}
+                         &nbsp Last name: ${((res.data)[i]).lastName} &nbsp age: ${((res.data)[i]).age} &nbsp Wins: ${((res.data)[i]).wins}
+                          &nbsp losses: ${((res.data)[i]).losses} &nbsp Defences: ${((res.data)[i]).defences} &nbsp Bonuses: ${((res.data)[i]).bonuses}
+                           &nbsp Division: ${((res.data)[i]).division} <br>`;
                         let parentElement = DOM.heavyweightList
                         parentElement.appendChild(childElement);
                     }
@@ -223,7 +262,10 @@ let refreshHeavyweight = () => {
                 if (res.data.division == "heavyweight") {
                     let childElement = document.createElement(`li`);
                     childElement.id = (res.data).id;
-                    childElement.innerHTML = `${JSON.stringify(res.data)}`;
+                    childElement.innerHTML = `<b>ID: ${(res.data).id}</b> &nbsp First name: ${(res.data).firstName}
+                     &nbsp Last name: ${(res.data).lastName} &nbsp age: ${(res.data).age} &nbsp Wins: ${(res.data).wins}
+                      &nbsp losses: ${(res.data).losses} &nbsp Defences: ${(res.data).defences} &nbsp Bonuses: ${(res.data).bonuses}
+                       &nbsp Division: ${(res.data).division} <br>`;
                     let parentElement = DOM.heavyweightList;
                     parentElement.appendChild(childElement);
                 }
