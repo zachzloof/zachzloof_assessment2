@@ -1,4 +1,9 @@
 Coverage: 87.9%
+
+[Jira Board](https://zachzloof.atlassian.net/jira/software/projects/CN/boards/3)
+
+[Jira Burndown Chart](https://zachzloof.atlassian.net/jira/software/projects/CN/boards/3/reports/burndown)
+
 ---------------
 # Cloud Native Project
 ----------------------
