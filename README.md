@@ -275,6 +275,6 @@ This would be the one thing I would change, as the amount of code used could hav
 ## Authors
 -----------
 
-* **Zachary Zloof** - *From initial work - finished project* - [zachzloof](https://github.com/zachzloof)
+* **Zachary Zloof** - [zachzloof](https://github.com/zachzloof)
 
 

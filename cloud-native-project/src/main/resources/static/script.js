@@ -5,7 +5,8 @@ import * as DOM from './dom.js';
 let addChamp = champ => {
   let childElement = document.createElement(`li`);
   childElement.id = champ.id;
-  childElement.innerHTML = `${JSON.stringify(champ)}`;
+  childElement.innerHTML = `<b>ID: ${champ.id}</b> &nbsp First name: ${champ.firstName} &nbsp Last name: ${champ.lastName} &nbsp age: ${champ.age} 
+  &nbsp Wins: ${champ.wins} &nbsp losses: ${champ.losses} &nbsp Defences: ${champ.defences} &nbsp Bonuses: ${champ.bonuses} &nbsp Division: ${champ.division} <br>`;
   let parentElement = DOM.output;
   parentElement.appendChild(childElement);
 }
@@ -170,7 +171,7 @@ const deleteAll = () => {
     refresh();
   }).catch((err) => {
     console.log(err);
-  }) 
+  })
 }
 
 DOM.createButton.onclick = () => createChamp();
